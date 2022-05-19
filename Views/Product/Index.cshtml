@@ -1,0 +1,47 @@
+﻿@using EntityLayer.Concrete
+@model List<Product>
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml"; ;
+}
+
+
+<table class="table table-bordered">
+
+
+
+    <tr>
+        <th>#</th>
+        <th>Ürün Adı</th>
+        <th>Marka</th>
+        <th>Fiyat</th>
+        <th>Görsel</th>
+        <th>Renk</th>
+        <th>Ebat</th>
+        <th>Durum</th>
+       
+    </tr>
+    @foreach (var item in Model)
+        {
+
+    <tr>
+
+        <td></td>
+        <td>@item.ProductName</td>
+        <td>@item.ProductBrand</td>
+        <td>@item.ProductPrice</td>
+        <td>@item.ProductImage</td>
+        <td>@item.ProductColor</td>
+        <td>@item.ProductDimension</td>
+        
+        
+
+    </tr>
+        }
+
+</table>
+
+<a href="/Product/ProductAdd/" class="btn btn-primary">Yeni Ürün Oluştur</a>
+
+
+
